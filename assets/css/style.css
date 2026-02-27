@@ -1,12 +1,12 @@
 :root{
- --bg: #1a1a1a;      /* dark background for contrast */
---card: #00829c;    /* bright orange for cards and highlights */
---muted: #ffffff;   /* subtle gray for muted elements */
---text: #ffffff;    /* white text for readability */
---a: #00ffff;       /* cyan for accent/links */
---b: #ff69b4;       /* hot pink for secondary accents */
-
-  --shadow:0 12px 32px rgba(0,0,0,.4)
+  --bg:#141428;
+  --card:#1e1e3a;
+  --muted:#b3b3d1;
+  --text:#f3f3fa;
+  --a:#5a4fff; /* accent indigo */
+  --b:#2e2e5a; /* deep accent */
+  --highlight:#4fd1c5; /* teal highlight */
+  --shadow:0 12px 32px rgba(20,20,40,.5)
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -15,7 +15,7 @@ body{
   font-family:Inter,Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--text);
   background:
-    radial-gradient(1200px 800px at 10% -10%, rgba(59,130,246,.18), transparent 40%),
+    radial-gradient(1200px 800px at 10% -10%, rgba(62, 129, 237, 0.18), transparent 40%),
     radial-gradient(1200px 800px at 90% 10%, rgba(139,92,246,.16), transparent 40%),
     var(--bg);
   line-height:1.65
@@ -23,12 +23,15 @@ body{
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
 .nav{position:sticky;top:0;z-index:50;background:rgba(11,14,22,.7);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;flex-wrap:nowrap;min-width:0;}
 .nav a{color:var(--text);text-decoration:none;margin-left:18px;font-weight:600;opacity:.9}
 .nav a:hover{opacity:1}
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{height:36px}
 .logo span{font-weight:800;background:linear-gradient(45deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
 .menu{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.menu{display:flex;align-items:center;gap:12px;flex-wrap:nowrap;min-width:0;}
+.nav a{color:var(--text);text-decoration:none;margin-left:6px;font-weight:600;opacity:.9;white-space:nowrap;}
 .right{display:flex;align-items:center;gap:8px}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:linear-gradient(45deg,var(--a),var(--b));color:white;text-decoration:none;font-weight:800;border:0;box-shadow:var(--shadow);cursor:pointer}
 .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.14);color:var(--text);box-shadow:none}
